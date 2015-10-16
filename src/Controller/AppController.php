@@ -43,6 +43,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', []);
     }
 
     /**
@@ -54,16 +55,16 @@ class AppController extends Controller
     public function beforeRender(Event $event)
     {
         if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
+                in_array($this->response->type(), ['application/json', 'application/xml'])
+           ) {
             $this->set('_serialize', true);
         }
     }
 
-    public function beforeFilter(){
+    public function beforeFilter(Event $event){
         $this->Auth->config('authenticate', [
-            'Form',
-            'OAuthServer.OAuth'
+                'Form',
+                'OAuthServer.OAuth'
         ]);
     }
 }

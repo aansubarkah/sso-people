@@ -1,6 +1,6 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
+    "name": "sso-people",
+    "description": "SSO for People",
     "homepage": "http://cakephp.org",
     "type": "project",
     "license": "MIT",
@@ -10,7 +10,10 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "uafrica/oauth-server": "dev-master"
+        "uafrica/oauth-server": "dev-master",
+        "friendsofcake/bootstrap-ui": "0.4.x-dev",
+        "friendsofcake/crud": "dev-master",
+        "friendsofcake/crud-view": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
