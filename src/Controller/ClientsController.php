@@ -5,6 +5,7 @@ use Crud\Controller\ControllerTrait;
 
 /**
  * OauthClients Controller
+ * lorem ipsum dolor sit amet
  *
  * @property \OAuthServer\Model\Table\ClientsTable $Clients
  */
